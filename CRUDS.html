@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD System</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="mx-0 text-white bg-zinc-800 my-5 font-mono">
+    <button id="upbtn" onclick="toUp()" class="fixed bg-cyan-600 w-12 h-12 text-black font-bold text-center border-2 border-black bottom-3 right-3 rounded-2xl hidden">Up</button>
+    <div class="cruds w-full sm:w-4/5 text-center m-auto px-4 sm:px-0">
+        <div class="header mb-5 uppercase">
+            <h1 class="mb-4 font-bold text-3xl sm:text-5xl">My CRUD Program</h1>
+            <h2 class="mb-4 font-semibold text-xl sm:text-3xl">Data Management System</h2>
+        </div>
+        <div class="info">
+            <input class="border-cyan-600 border-2 w-full h-9 rounded bg-zinc-900 focus:bg-black hover:scale-105 outline-none mb-5" id="title" type="text" placeholder="Title" required>
+            <div class="mb-5 flex flex-col sm:flex-row justify-between gap-4 sm:gap-0">
+                <input onkeyup="getTotal()"  class="border-cyan-600 w-full sm:w-1/5 h-9 rounded border-2 bg-zinc-900 focus:bg-black hover:scale-105 outline-none" id="price" type="number" placeholder="Price" required>
+                <input onkeyup="getTotal()"  class="border-cyan-600 w-full sm:w-1/5 h-9 rounded border-2 bg-zinc-900 focus:bg-black hover:scale-105 outline-none" id="taxes" type="number" placeholder="Taxes">
+                <input onkeyup="getTotal()"  class="border-cyan-600 w-full sm:w-1/5 h-9 rounded border-2 bg-zinc-900 focus:bg-black hover:scale-105 outline-none" id="ads_cost" type="number" placeholder="Ads_Cost">
+                <input onkeyup="getTotal()"  class="border-cyan-600 w-full sm:w-1/5 h-9 rounded border-2 bg-zinc-900 focus:bg-black hover:scale-105 outline-none" id="discount" type="number" placeholder="Discount">
+                <small  class="bg-red-700 p-2 rounded before:content-['Total=>']" id="total">0</small>
+            </div>
+            <input class="border-cyan-600 outline-none h-9 mb-4 border-2 w-full rounded bg-zinc-900 focus:bg-black hover:scale-105" id="count" type="number" placeholder="Count" required>
+            <input class="border-cyan-600 outline-none h-9 mb-5 border-2 w-full rounded bg-zinc-900 focus:bg-black hover:scale-105" id="category" type="text" placeholder="Category" required>
+            <button class="bg-cyan-600 p-1 w-full rounded-2xl hover:bg-cyan-500 text-black text-lg font-bold" id="submit">Create</button>
+        </div>
+        <div class="table w-full mt-5">
+            <input class="border-cyan-600 border-2 w-full  h-9 rounded bg-zinc-900 focus:bg-black focus:scale-105 hover:scale-105 outline-none" id="search" type="text" placeholder="Search" onkeyup="searchItem(this.value)">
+            <div class="mt-4 flex flex-col sm:flex-row justify-between gap-4 sm:gap-0">
+                <button onclick="getSearchMood(this.id)" class="bg-cyan-600 p-1 w-full sm:w-2/5 rounded-2xl hover:bg-cyan-500 text-black text-lg font-bold " id="searchByTitle">Search By Title</button>
+                <button onclick="getSearchMood(this.id)" class="bg-cyan-600 p-1 w-full sm:w-2/5 rounded-2xl hover:bg-cyan-500 text-black text-lg font-bold " id="searchByCategory">Search By Category</button>
+            </div>
+            <div class="mt-5 overflow-x-auto">
+                <div id="delsec" class="mb-4 flex hidden">
+                    <button class="bg-red-800 p-1 w-full rounded-2xl hover:bg-red-700 text-black text-lg font-bold " id="delAll">Delete All</button>
+                    <small  class="bg-cyan-600 text-black p-2 rounded before:content-['TotalItems=>'] ml-2 font-bold text-xl" id="totalItems">0</small>
+                </div>
+                <table class="bg-slate-600 w-full border-2 border-black text-center">
+                    <thead class="uppercase">
+                        <tr>
+                            <th class="border-2 border-black p-1">ID</th>
+                            <th class="border-2 border-black p-1">Title</th>
+                            <th class="border-2 border-black p-1">Price</th>
+                            <th class="border-2 border-black p-1">Taxes</th>
+                            <th class="border-2 border-black p-1">Ads_Cost</th>
+                            <th class="border-2 border-black p-1">Discount</th>
+                            <th class="border-2 border-black p-1">Total</th>
+                            <th class="border-2 border-black p-1">Category</th>
+                            <th class="border-2 border-black p-1">Update</th>
+                            <th class="border-2 border-black p-1">Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody">
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
