@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ p-2<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -14,20 +14,20 @@
             <h2 class="mb-4 font-semibold text-xl sm:text-3xl">Data Management System</h2>
         </div>
         <div class="info">
-            <input class="border-cyan-600 border-2 w-full h-9 rounded bg-zinc-900 focus:bg-black hover:scale-105 outline-none mb-5" id="title" type="text" placeholder="Title" required>
+            <input class="border-cyan-600 p-2 border-2 w-full h-9 rounded bg-zinc-900 focus:bg-black hover:scale-105 outline-none mb-5" id="title" type="text" placeholder="Title" required>
             <div class="mb-5 flex flex-col sm:flex-row justify-between gap-4 sm:gap-0">
-                <input onkeyup="getTotal()"  class="border-cyan-600 w-full sm:w-1/5 h-9 rounded border-2 bg-zinc-900 focus:bg-black hover:scale-105 outline-none" id="price" type="number" placeholder="Price" required>
-                <input onkeyup="getTotal()"  class="border-cyan-600 w-full sm:w-1/5 h-9 rounded border-2 bg-zinc-900 focus:bg-black hover:scale-105 outline-none" id="taxes" type="number" placeholder="Taxes">
-                <input onkeyup="getTotal()"  class="border-cyan-600 w-full sm:w-1/5 h-9 rounded border-2 bg-zinc-900 focus:bg-black hover:scale-105 outline-none" id="ads_cost" type="number" placeholder="Ads_Cost">
-                <input onkeyup="getTotal()"  class="border-cyan-600 w-full sm:w-1/5 h-9 rounded border-2 bg-zinc-900 focus:bg-black hover:scale-105 outline-none" id="discount" type="number" placeholder="Discount">
+                <input onkeyup="getTotal()"  class="border-cyan-600 p-2 w-full sm:w-1/5 h-9 rounded border-2 bg-zinc-900 focus:bg-black hover:scale-105 outline-none" id="price" type="number" placeholder="Price" required>
+                <input onkeyup="getTotal()"  class="border-cyan-600 p-2 w-full sm:w-1/5 h-9 rounded border-2 bg-zinc-900 focus:bg-black hover:scale-105 outline-none" id="taxes" type="number" placeholder="Taxes">
+                <input onkeyup="getTotal()"  class="border-cyan-600 p-2 w-full sm:w-1/5 h-9 rounded border-2 bg-zinc-900 focus:bg-black hover:scale-105 outline-none" id="ads_cost" type="number" placeholder="Ads_Cost">
+                <input onkeyup="getTotal()"  class="border-cyan-600 p-2 w-full sm:w-1/5 h-9 rounded border-2 bg-zinc-900 focus:bg-black hover:scale-105 outline-none" id="discount" type="number" placeholder="Discount">
                 <small  class="bg-red-700 p-2 rounded before:content-['Total=>']" id="total">0</small>
             </div>
-            <input class="border-cyan-600 outline-none h-9 mb-4 border-2 w-full rounded bg-zinc-900 focus:bg-black hover:scale-105" id="count" type="number" placeholder="Count" required>
-            <input class="border-cyan-600 outline-none h-9 mb-5 border-2 w-full rounded bg-zinc-900 focus:bg-black hover:scale-105" id="category" type="text" placeholder="Category" required>
+            <input class="border-cyan-600 p-2 outline-none h-9 mb-4 border-2 w-full rounded bg-zinc-900 focus:bg-black hover:scale-105" id="count" type="number" placeholder="Count" required>
+            <input class="border-cyan-600 p-2 outline-none h-9 mb-5 border-2 w-full rounded bg-zinc-900 focus:bg-black hover:scale-105" id="category" type="text" placeholder="Category" required>
             <button class="bg-cyan-600 p-1 w-full rounded-2xl hover:bg-cyan-500 text-black text-lg font-bold" id="submit">Create</button>
         </div>
         <div class="table w-full mt-5">
-            <input class="border-cyan-600 border-2 w-full  h-9 rounded bg-zinc-900 focus:bg-black focus:scale-105 hover:scale-105 outline-none" id="search" type="text" placeholder="Search" onkeyup="searchItem(this.value)">
+            <input class="border-cyan-600 p-2 border-2 w-full  h-9 rounded bg-zinc-900 focus:bg-black focus:scale-105 hover:scale-105 outline-none" id="search" type="text" placeholder="Search" onkeyup="searchItem(this.value)">
             <div class="mt-4 flex flex-col sm:flex-row justify-between gap-4 sm:gap-0">
                 <button onclick="getSearchMood(this.id)" class="bg-cyan-600 p-1 w-full sm:w-2/5 rounded-2xl hover:bg-cyan-500 text-black text-lg font-bold " id="searchByTitle">Search By Title</button>
                 <button onclick="getSearchMood(this.id)" class="bg-cyan-600 p-1 w-full sm:w-2/5 rounded-2xl hover:bg-cyan-500 text-black text-lg font-bold " id="searchByCategory">Search By Category</button>
